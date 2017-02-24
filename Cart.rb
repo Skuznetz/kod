@@ -11,4 +11,8 @@
    def remove_item
    	 @items.pop
    end
+
+   def validate
+   	@items.each {|i| puts "Не указана цена" if i.price.nil?}
+   end
 end
