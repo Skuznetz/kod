@@ -1,5 +1,5 @@
 class Item
-  def initialize(options = {})
+  def initialize(options={})
   	@price = options[:price]
   	@weight = options[:weight]
   end
