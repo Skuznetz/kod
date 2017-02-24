@@ -1,14 +1,14 @@
 ﻿class Cart
   attr_reader :items
    def initialize
-     items = Array.new 
+     @items = Array.new 
    end
 
    def add_item(item)
-   	@item.push item
+   	@items.push item
    end
 
    def remove_item
-   	 @item.pop
+   	 @items.pop
    end
 end
