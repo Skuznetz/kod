@@ -11,7 +11,8 @@ item2 = RealItem.new({:weight =>100, :name =>"bar"})
  cart.add_item item1
  cart.add_item item2
  p cart.items
-
  cart.delete_invalid_items
-
  p cart.items
+
+ p item1.respond_to?(:weight)
+ p item2.respond_to?(:weight)

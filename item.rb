@@ -5,7 +5,7 @@ class Item
   	@name = options[:name]
   end
 
-  attr_reader :price,:weight,:name
+  attr_reader :price,:name
   attr_writer :price
   
   def info
