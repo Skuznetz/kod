@@ -3,4 +3,9 @@ class RealItem < Item
   	@weight = options[:weight]
   	super
   end
+
+  def info
+  	yield(weight)
+  	super
+  end
 end

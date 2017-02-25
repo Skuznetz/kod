@@ -10,7 +10,7 @@ class Item
   
   def info
   	yield(price)
-  	yield(weight)
+  	
   	yield(name)
   end
 
