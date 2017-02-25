@@ -1,7 +1,7 @@
 class Item
   def initialize(options={})
   	@price = options[:price]
-  	@weight = options[:weight]
+  	
   	@name = options[:name]
   end
 
