@@ -11,4 +11,4 @@ item2 = RealItem.new({:weight =>100, :name =>"bar"})
  cart.add_item item1
  cart.add_item item2
  
- puts Item.discount
+ puts item1.price

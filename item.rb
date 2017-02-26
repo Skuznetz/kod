@@ -22,4 +22,7 @@ class Item
   	yield(name)
   end
 
+  def price
+  	@price - @price*self.class.discount
+  end
 end
