@@ -1,10 +1,11 @@
 class Item
-
+  
+  @@discount = 0.1
 	def self.discount
 		if Time.now.month == 4
-			0.3
+			return @@discount + 0.2
 		else
-			0.1
+			return @@discount
 		end
 	end
   def initialize(options={})
