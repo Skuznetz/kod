@@ -1,4 +1,12 @@
 class Item
+
+	def self.discount
+		if Time.now.month == 4
+			0.3
+		else
+			0.1
+		end
+	end
   def initialize(options={})
   	@price = options[:price]
   	
