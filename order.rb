@@ -1,17 +1,10 @@
 class Order
-	def add_item(item)
-   	@items.push item
+	attr_reader :items
+   
+	def initialize
+     @items = Array.new 
    end
-
-   def remove_item
-   	 @items.pop
-   end
-
-   def validate
-   	@items.each {|i| puts "Не указана цена" if i.price.nil?}
-   end
-
-   def delete_invalid_items
-   	@items.delete_if {|i| i.price.nil?}
-   end
+    
+    def place
+    end
 end

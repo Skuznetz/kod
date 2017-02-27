@@ -1,14 +1,8 @@
-﻿class Cart
-	
-	attr_reader :items
-
-   def initialize
-     @items = Array.new 
-   end
-
-   def add_item(item)
+module ItemContainer
+   
+   
+	def add_item(item)
    	@items.push item
-  attr_reader :items
    end
 
    def remove_item
@@ -22,5 +16,4 @@
    def delete_invalid_items
    	@items.delete_if {|i| i.price.nil?}
    end
-
 end
