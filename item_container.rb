@@ -1,12 +1,18 @@
 module ItemContainer
+
+	module ClassMethods
    
-    def self.min_price
+      def min_price
     	100
+      end
     end
+
+    module InstanceMethods 
 
 	def add_item(item)
 	 unless item.price < self.class.min_price
    	   @items.push item
+   	 end
    end
 
    def remove_item
@@ -25,5 +31,5 @@ module ItemContainer
    	  @items.count {|i| i.price}
    	end
    
-
+   end
 end
