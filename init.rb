@@ -7,7 +7,7 @@ require_relative "real_item"
 
 item1 = VirtualItem.new({:price =>10, :weight =>100, :name =>"bar"})
 
-item2 = RealItem.new({:weight =>100, :name =>"bar"})
+item2 = RealItem.new({:weight =>100,:name =>"bar"})
 item3 = RealItem.new({:weight =>100, :name =>"pup"})
  cart = Cart.new
  cart.add_item item1
@@ -20,4 +20,6 @@ item3 = RealItem.new({:weight =>100, :name =>"pup"})
  order.add_item item2
  order.add_item item3
  order.remove_item
+ 
  puts order.items.size
+ puts order.count_valid_items

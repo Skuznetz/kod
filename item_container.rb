@@ -19,11 +19,11 @@ module ItemContainer
     end
   end
 
-    module Info
+   module Info
 
-   def count_volid_items
-   	 @items.count {|i| i.price}
+   	def count_valid_items
+   	  @items.count {|i| i.price}
+   	end
    end
-  end
 
 end
