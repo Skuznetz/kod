@@ -4,10 +4,15 @@
 
 	include ItemContainer
     
-   def initialize
+   def initialize(owner)
      @items = Array.new 
-
+     @owner = owner
+   end
+   
+   def save_to_file
    end
 
+   def read_from_file
+   end
    
 end
