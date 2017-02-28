@@ -1,5 +1,5 @@
 require_relative "item_container"
-require_relative "cart"
+require_relative "сart"
 require_relative "order"
 require_relative "item"
 require_relative "virtual_item"
@@ -23,3 +23,4 @@ item3 = RealItem.new({:weight =>100, :name =>"pup"})
  
  puts order.items.size
  puts order.count_valid_items
+  
