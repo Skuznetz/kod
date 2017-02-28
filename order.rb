@@ -1,10 +1,10 @@
 class Order
 	attr_reader :items
 
-	include ItemContainer::Manager
+	include ItemContainer
     
 
-    # include ItemContainer::Info
+    
 	def initialize
      @items = Array.new 
 
