@@ -11,7 +11,7 @@
    
    def save_to_file
    	 File.open("#{@owner}_cart.txt","w") do |f| 
-   	 @items.each { |i| f.puts "#{i.name}:#{i.price}:#{i.weight}" }
+   	 @items.each { |i| f.puts i}
    	end
    end
 
