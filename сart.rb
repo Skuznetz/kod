@@ -17,7 +17,7 @@
 
    def read_from_file
    	return unless File.exists?("#{@owner}_cart.txt")
-   	item_fields = File.readlines("#{@owner}_cart.txt")
+   	File.readlines("#{@owner}_cart.txt").each {|i| @items << i.to_real_item }
    	
    	@items.uniq!
    end
