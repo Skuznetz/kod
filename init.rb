@@ -5,7 +5,7 @@ require_relative "order"
 require_relative "item"
 require_relative "virtual_item"
 require_relative "real_item"
-
+require_relative "antique_item"
 @items = []
 @items << VirtualItem.new({:price =>101,:weight =>100, :name =>"bar"})
 

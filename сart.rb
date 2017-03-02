@@ -5,6 +5,8 @@
 	include ItemContainer
    class ItemNotSupported < StandardError;end
 
+   UNSUPPORTED_ITEMS = [AntiqueItem,VirtualItem]
+
    def initialize(owner)
      @items = Array.new 
      @owner = owner
@@ -13,7 +15,7 @@
    def save_to_file
    	 File.open("#{@owner}_cart.txt","w") do |f| 
    	 @items.each do |i| 
-     raise ItemNotSupported ,"корзина не сохранит виртуальный товар" if i.class == VirtualItem
+     raise ItemNotSupported if UNSUPPORTED_ITEMS.include?(i.class)
      f.puts i
      end
    	end
