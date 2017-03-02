@@ -8,6 +8,6 @@ end
 cart.read_from_file
 begin
 cart.save_to_file
-rescue
-	puts "-----"
+rescue Cart::ItemNotSupported
+	puts "Мы не можем добавлять виртуальный товар в карзину"
 end

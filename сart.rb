@@ -3,8 +3,8 @@
 	attr_reader :items
 
 	include ItemContainer
-   # class ItemNotSupported < StandardError;end
-    
+   class ItemNotSupported < StandardError;end
+
    def initialize(owner)
      @items = Array.new 
      @owner = owner
@@ -13,7 +13,7 @@
    def save_to_file
    	 File.open("#{@owner}_cart.txt","w") do |f| 
    	 @items.each do |i| 
-     raise "корзина не сохранит виртуальный товар" if i.class == VirtualItem
+     raise ItemNotSupported ,"корзина не сохранит виртуальный товар" if i.class == VirtualItem
      f.puts i
      end
    	end
