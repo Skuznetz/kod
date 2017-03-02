@@ -3,6 +3,7 @@
 	attr_reader :items
 
 	include ItemContainer
+   # class ItemNotSupported < StandardError;end
     
    def initialize(owner)
      @items = Array.new 
