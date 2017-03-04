@@ -38,6 +38,10 @@ module ItemContainer
     def count_valid_items
    	  @items.count {|i| i.price}
    	end
+   	private
+   	  def show_all_item_with_name(n)
+   	  	@items.map {|i| i if n== i.name}
+   	  end
    
    end
 
