@@ -1,2 +1,2 @@
-class AntiqueItem < AntiqueItemend
+class AntiqueItem < Item
 end
