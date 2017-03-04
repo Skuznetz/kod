@@ -14,3 +14,5 @@ require_relative "order"
 @items << RealItem.new({:weight =>100,:price =>101,:name =>"kettle"})
 @items << RealItem.new({:weight =>100,:price =>101, :name =>"pup"})
 
+cart = Cart.new("serg")
+cart.all_cars

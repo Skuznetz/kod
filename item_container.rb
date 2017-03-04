@@ -8,9 +8,14 @@ module ItemContainer
     end
 
     module InstanceMethods 
-    	# def method_missing(method_name)
-    	#   puts "метод #{method_name} не определён"
-    	# end
+    	def method_missing(method_name)
+    	  if method_name =~ /^all_/
+    	  puts "Просмотр всех товаров"
+    	  else
+    		super
+    	  end
+    	end
+
 
 	def add_item(item)
 	 unless item.price < self.class.min_price
