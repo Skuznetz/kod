@@ -9,7 +9,8 @@ require_relative "order"
 
 
 @items = []
-@items << VirtualItem.new({:price =>101,:weight =>100, :name =>"bar"})
+@items << AntiqueItem.new({:price =>101,:weight =>100, :name =>"bar"})
 
 @items << RealItem.new({:weight =>100,:price =>101,:name =>"kettle"})
 @items << RealItem.new({:weight =>100,:price =>101, :name =>"pup"})
+
