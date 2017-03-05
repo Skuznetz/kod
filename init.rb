@@ -18,5 +18,8 @@ cart = Cart.new("serg")
 cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"bar"})
 cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"bar"})
 cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"kettle"})
-p cart.all_bars
-p cart.all_kettles
+
+puts @items[0].kind_of?(Item)
+puts @items[0].kind_of?(AntiqueItem)
+puts @items[0].class == AntiqueItem
+puts @items[0].class == Item
