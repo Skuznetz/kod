@@ -14,10 +14,12 @@ require_relative "order"
 @items << RealItem.new({:weight =>100,:price =>101,:name =>"kettle"})
 @items << RealItem.new({:weight =>100,:price =>101, :name =>"pup"})
 
+@items.each {|i| puts i.name}
+
 cart = Cart.new("serg")
 cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"bar"})
 cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"bar"})
 cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"kettle"})
 
-method = "all_kettles"
+method = "all_bars"
 p cart.send(method)

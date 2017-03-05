@@ -8,7 +8,7 @@ class Item
 			return @@discount
 		end
 	end
-  def initialize(name,options={})
+  def initialize(name, options={})
   	@real_price = options[:price]
   	
   	@name = name
