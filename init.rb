@@ -19,4 +19,5 @@ cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"bar"})
 cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"bar"})
 cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"kettle"})
 
-puts @items[0].respond_to?(:info)
+puts @items[0].send(:price)
+puts @items[0].price
