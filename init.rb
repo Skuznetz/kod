@@ -1,5 +1,7 @@
 require_relative "store_application"
 StoreApplication.new
+StoreApplication.new
+StoreApplication.new
 
 
 @items = []

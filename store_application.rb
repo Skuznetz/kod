@@ -1,6 +1,7 @@
 class StoreApplication
   class << self
 	  def new
+	   unless @instance
 	  	puts "файлы загружаются"
 	  	puts self.class
         require_relative "string"
@@ -11,6 +12,7 @@ class StoreApplication
         require_relative "antique_item"
         require_relative "сart"
         require_relative "order"
+       end
         @instance ||= self
        end
     end
