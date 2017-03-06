@@ -1,3 +1,4 @@
+require_relative "store_application"
 StoreApplication.new
 
 
