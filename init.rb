@@ -11,10 +11,10 @@ require_relative "store_application"
   end
 end
 
-p StoreApplication.environment
-p StoreApplication.name
-p StoreApplication::Admin.email
-p StoreApplication::Admin.login
+unless StoreApplication.frozen?
+ StoreApplication.name = "My name"
+end
+
 
 @items = []
 @items << AntiqueItem.new("bar",price: 101,weight: 100)
@@ -29,6 +29,6 @@ cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"bar"})
 cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"bar"})
 cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"kettle"})
 
-order = Order.new
-@items.each { |i| order.add_item(i)}
-order.place
+# order = Order.new
+# @items.each { |i| order.add_item(i)}
+# order.place
