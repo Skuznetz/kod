@@ -1,6 +1,6 @@
 class StoreApplication
   class << self
-	  def new
+	  def config
 	   unless @instance
 	  	puts "файлы загружаются"
 	  	puts self.class

@@ -1,5 +1,15 @@
 require_relative "store_application"
-puts StoreApplication.new  ==  StoreApplication.new
+puts StoreApplication.config do |app|
+  
+  app.name = "My Store"
+  app.environment = :prodaction
+
+  app.admin do |admin|
+  	admin.email ="admin@mystore.com"
+  	admin.login = "admin"
+  	admin.send_info_emails_on :mondays
+  end
+end
 
 
 
