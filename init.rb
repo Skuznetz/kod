@@ -11,9 +11,6 @@ require_relative "store_application"
   end
 end
 
-unless StoreApplication.frozen?
- StoreApplication.name = "My name"
-end
 
 
 @items = []
@@ -22,12 +19,12 @@ end
 @items << RealItem.new({:weight =>100,:price =>101,:name =>"kettle"})
 @items << RealItem.new({:weight =>100,:price =>101, :name =>"pup"})
 
-@items.each {|i| puts i.name}
+# @items.each {|i| puts i.name}
 
-cart = Cart.new("serg")
-cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"bar"})
-cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"bar"})
-cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"kettle"})
+# cart = Cart.new("serg")
+# cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"bar"})
+# cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"bar"})
+# cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"kettle"})
 
 # order = Order.new
 # @items.each { |i| order.add_item(i)}
