@@ -11,7 +11,7 @@ puts StoreApplication.config do |app|
   end
 end
 
-
+p StoreApplication.environment
 
 @items = []
 @items << AntiqueItem.new("bar",price: 101,weight: 100)
