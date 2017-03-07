@@ -1,5 +1,5 @@
 require_relative "store_application"
-puts StoreApplication.config do |app|
+ StoreApplication.config do |app|
   
   app.name = "My Store"
   app.environment = :prodaction
@@ -12,6 +12,9 @@ puts StoreApplication.config do |app|
 end
 
 p StoreApplication.environment
+p StoreApplication.name
+p StoreApplication::Admin.email
+p StoreApplication::Admin.login
 
 @items = []
 @items << AntiqueItem.new("bar",price: 101,weight: 100)
@@ -27,4 +30,4 @@ cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"bar"})
 cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"kettle"})
 
 method = "all_bars"
-p cart.send(method)
+# p cart.send(method)

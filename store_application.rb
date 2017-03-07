@@ -21,7 +21,9 @@ class StoreApplication
    def admin(&block)
    	@admin ||= Admin.new(&block)
    end
-   class Admin
+  
+ end
+  class Admin
 
    	 class <<self
 
@@ -39,5 +41,4 @@ class StoreApplication
       end
    	end
   end
- end
 end
