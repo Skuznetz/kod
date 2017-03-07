@@ -20,4 +20,5 @@ end
 @items << RealItem.new({:weight =>100,:price =>101, :name =>"pup"})
 
 order = Order.new
-order.placed
+order.place
+puts order.placed_at.strftime("%b %-d, %Y %H:%M:%S")
