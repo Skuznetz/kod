@@ -5,7 +5,7 @@ require_relative "store_application"
   app.environment = :prodaction
 
   app.admin do |admin|
-  	admin.email ="admin@mystore.com"
+  	admin.email ="s.kuznetzov@mail.ru"
   	admin.login = "admin"
   	admin.send_info_emails_on :mondays
   end
@@ -29,5 +29,6 @@ cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"bar"})
 cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"bar"})
 cart.add_item RealItem.new({:weight =>100,:price =>101,:name =>"kettle"})
 
-method = "all_bars"
-# p cart.send(method)
+order = Order.new
+@items.each { |i| order.add_item(i)}
+order.place

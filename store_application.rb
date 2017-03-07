@@ -4,7 +4,7 @@ class StoreApplication
 	   unless @instance
 	   	yield(self)
 	  	puts "файлы загружаются"
-	  
+	    require "pony"
         require_relative "string"
         require_relative "item_container"
         require_relative "item"
