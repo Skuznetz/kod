@@ -11,7 +11,7 @@ class Order
    end
     
     def place
-      # thr = Thread.new do 
+      thr = Thread.new do 
       Pony.mail(:to => StoreApplication::Admin.email,
       :from => "My Store <",
       :via => :smtp, :via_options => {
@@ -23,10 +23,10 @@ class Order
       	domain:  "mail.google.com" },
       subject:"New order has been placed", body: "please check back you admin page to see it!")
       end
-      # while(thr.alive?)
-      # 	puts "."
-      # 	sleep(1)
+      while(thr.alive?)
+      	puts "."
+      	sleep(1)
       	
-      # end
+      end
     end
 end
