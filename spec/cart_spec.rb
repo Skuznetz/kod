@@ -4,10 +4,11 @@ require_relative "../app/virtual_item"
 require_relative "../app/item_container"
 require_relative "../app/cart"
 
+
 describe Cart do 
 
   it "adds items into the cart" do 
-  	cart = Cart.new
+  	cart = Cart.new("serg")
   	item1 = Item.new("kettle",price: 200)
   	item2 = Item.new("bar",price: 200)
   	cart.add_items(item1,item2)

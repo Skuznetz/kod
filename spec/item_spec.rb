@@ -4,7 +4,7 @@ require_relative "../app/virtual_item"
 describe Item do 
 
 	it "calculates price according to a special formula" do
-	item = Item.new(price: 200, name: "kettle") 
-	item.price.should ==nil
+	item = Item.new( "kettle", price: 200 ) 
+	item.price.should == 222.0
     end
 end
