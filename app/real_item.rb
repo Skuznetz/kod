@@ -10,4 +10,9 @@ class RealItem < Item
   	yield(weight)
   	super
   end
+
+  def to_s
+  	super +":#{self.weight}"
+  end
+
 end
