@@ -17,4 +17,9 @@ describe Cart do
   	expect(cart.items).to include(item1,item2)
   end
 
+  it "проверяем удаление товара"
+  it "учет добавленных товаров"
+  it "оформление заказа"
+  it "самоочищение корзины"
+
 end
