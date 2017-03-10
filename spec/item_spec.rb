@@ -12,11 +12,11 @@ describe Item do
 	end
 
 	it "calculates price according to a special formula" do
-	 @item.price.should == 222.0
+	 expect(@item.price).to eq(222.0)
 	 @item.price = 300
     end
 
     it "return info on object" do 
-    @item.to_s.should == "kettle:222.0"
+    expect(@item.to_s).to eq("kettle:222.0")
   end
 end

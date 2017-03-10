@@ -8,6 +8,9 @@ module ItemContainer
     end
 
     module InstanceMethods 
+
+      attr_reader :items
+      
     	def method_missing(method_name)
     	  if method_name =~ /^all_/
     	  show_all_item_with_name(method_name.to_s.sub(/^all_/,'').chomp('s'))
