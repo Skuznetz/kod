@@ -9,7 +9,10 @@ class RealItem < Item
   end
 
   def info
-  	yield(weight)
+  	if  !@@show_info_about[:weight] ||
+  		@@show_info_about[:weight].call(weight)
+  	  yield(weight)
+    end
   	super
   end
 
