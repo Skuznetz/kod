@@ -9,6 +9,7 @@ require_relative "../app/cart"
 
 describe Cart do 
 
+	describe "managing items" do 
   it "adds items into the cart" do 
   	cart = Cart.new("serg")
   	item1 = Item.new("kettle",price: 200)
@@ -18,6 +19,7 @@ describe Cart do
   end
 
   it "проверяем удаление товара"
+end
   it "учет добавленных товаров"
   it "оформление заказа"
   it "самоочищение корзины"
